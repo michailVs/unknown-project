@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *, ** {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0 auto;
+            font-family: sans-serif;
+        }
+        .canvas {
+            outline: 1px solid;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100svh;
+            margin: 0 20px;
+            max-width: 100%;
+        }
+        .start {
+            width: 150px;
+            height: 50px;
+            background-color: #52da41;
+            border: 2px solid black;
+            outline: 4px solid #52da41;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .start.active {
+            background-color: #e02323;
+            border: 2px solid white;
+            outline: 4px solid #e02323;
+            color: white;
+        }
+        .inputs {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .logs {
+            height: 100%;
+            overflow: hidden;
+            max-width: 400px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="logs">
+            <h2 class="logs-text">Entity: </h2>
+        </div>
+        <canvas class="canvas" width="500" height="500"></canvas>
+        <div class="inputs">
+            <label>
+                <span>Count:</span>
+                <input type="number" class="count" value="2000">
+            </label>
+            <button class="start">Start</button>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
